@@ -1,0 +1,26 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.1.5.RELEASE'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.thetestroom'
+version '1.0.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'com.graphql-java-kickstart:graphql-java-tools:5.4.1'
+	compile 'com.graphql-java-kickstart:graphql-spring-boot-starter:5.2'
+}
+
+bootJar {
+	manifest {
+		attributes 'Start-Class': 'com.thetestroom.Application'
+	}
+}
