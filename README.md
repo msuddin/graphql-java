@@ -14,7 +14,7 @@ Answer: To understand how GraphQL implementation works
 
 ## Instructions
 
-### Running the App
+### Running the App via Gradle
 
 From the root directory of this project, run the following command:
 
@@ -22,7 +22,21 @@ From the root directory of this project, run the following command:
 ./gradlew clean bootRun
 ```
 
-This will run the application locally as a Spring boot app.
+This will run the application locally as a Spring boot app inside a gradle task.
+
+### Running the App via Jar
+
+From the root directory of the project, run the following command to build the jar:
+
+```
+./gradlew clean build
+```
+
+Now run the following command to run the jar locally:
+
+```
+java -jar build/libs/sample-graphql-1.0.0-SNAPSHOT.jar
+```
 
 ### Running GraphQL Examples
 
@@ -47,4 +61,8 @@ query {
 
 ### Testing
 
-tbc
+From the root directory, run the following command to run all unit tests:
+
+```
+./gradlew clean test
+```
